@@ -228,15 +228,15 @@ int ejercicio1() {
                 cout << "Opcion invalida. Por favor, seleccione una opcion valida." << endl;
                 cout << endl;
             }
-            for (Producto *&producto : carrito) {
-                delete producto;
+            for (Producto *producto : carrito) {
+                delete &producto;
             }
         }
     }
     while (opcion != 4);
 
-    for (Producto *&producto : inventario) {
-        delete producto;
+    for (Producto *producto : inventario) {
+        delete &producto;
     }
 
     return 0;
