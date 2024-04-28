@@ -281,6 +281,8 @@ int ejercicio3() {
                 break;
             }
             case 5: {
+                delete cuenta;
+
                 break;
             }
             default: {
@@ -296,6 +298,8 @@ int ejercicio3() {
 
     for (Producto *&producto : inventario) {
         delete &producto;
+        delete cuenta;
+        return 0;
     }
 
     return 0;
